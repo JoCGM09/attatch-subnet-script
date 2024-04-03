@@ -27,7 +27,7 @@ subnet_id=$(echo "$subnets_output" | awk -v subnet="$IBM_POWER_SUBNET_NAME" '$2 
 if [ -n "$instance_crn" ] && [ -n "$subnet_id" ]; then
   connection_flags=""
     if [[ -n "$IBM_INSTANCE_ATTACH_IP" ]]; then
-  connection_flags+="--ip-address $IBM_INSTANCE_ATTACH_IP "
+  connection_flags+="--ip-address $IBM_INSTANCE_ATTACH_IP"
     fi
 
   echo "Attaching subnet into LPAR..."
